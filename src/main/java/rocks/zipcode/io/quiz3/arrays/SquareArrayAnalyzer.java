@@ -20,7 +20,7 @@ public class SquareArrayAnalyzer {
         for (Integer each : inputArray) {
             checkValue(squaredValues,each);
         }
-        return counter == 0;
+        return counter <= 0;
     }
 
     static void checkValue (Integer [] squaredValues, Integer value){
