@@ -37,6 +37,11 @@ public class VowelUtils {
     }
 
     public static Boolean isVowel(Character character) {
-        return null;
+        String [] vowels = {"a","e", "i", "o", "u"};
+        int i = 0;
+        for (String each : vowels){
+            if (each.equalsIgnoreCase(character.toString())) return true;
+        }
+        return false;
     }
 }
