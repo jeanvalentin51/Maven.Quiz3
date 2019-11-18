@@ -1,5 +1,7 @@
 package rocks.zipcode.io.quiz3.arrays;
 
+import rocks.zipcode.io.quiz3.fundamentals.StringUtils;
+
 /**
  * @author leon on 09/12/2018.
  */
@@ -37,13 +39,20 @@ public class TicTacToe {
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
+        String one = matrix[rowIndex][0];
+        String two = matrix[rowIndex][1];
+        String three = matrix[rowIndex][2];
 
-        return matrix[0][rowIndex].equals(matrix[1][rowIndex].equals(matrix[2][rowIndex]));
+        return one.equals(two) && one.equals(three);
     }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
 
-        return matrix[columnIndex][0].equals(matrix[columnIndex][1].equals(matrix[columnIndex][2]));
+        String one = matrix[0][columnIndex];
+        String two = matrix[1][columnIndex];
+        String three = matrix[2][columnIndex];
+
+        return one.equals(two) && one.equals(three);
     }
 
     public String getWinner() {
