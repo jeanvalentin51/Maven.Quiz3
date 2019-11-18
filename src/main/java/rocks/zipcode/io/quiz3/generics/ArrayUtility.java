@@ -18,7 +18,14 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findEvenOccurringValue() {
-        return null;
+        Integer evenOccuringValue = 0;
+
+        for (SomeType eachElement : this.array){
+            if (getNumberOfOccurrences(eachElement) % 2 == 0) {
+                evenOccuringValue = (Integer) eachElement;
+            }
+        }
+        return (SomeType) evenOccuringValue;
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
