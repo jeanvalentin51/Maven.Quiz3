@@ -11,6 +11,10 @@ public class PigLatinGenerator {
             return str.concat("way");
         }
 
+        if (VowelUtils.hasVowels(str) == false){
+            return str.concat("ay");
+        }
+
         return null;
     }
 }
