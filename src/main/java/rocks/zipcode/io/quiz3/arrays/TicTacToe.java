@@ -37,11 +37,13 @@ public class TicTacToe {
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
-        return null;
+
+        return matrix[0][rowIndex].equals(matrix[1][rowIndex].equals(matrix[2][rowIndex]));
     }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
-        return null;
+
+        return matrix[columnIndex][0].equals(matrix[columnIndex][1].equals(matrix[columnIndex][2]));
     }
 
     public String getWinner() {
