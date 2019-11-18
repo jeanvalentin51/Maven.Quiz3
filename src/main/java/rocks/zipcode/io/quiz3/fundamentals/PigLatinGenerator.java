@@ -5,6 +5,12 @@ package rocks.zipcode.io.quiz3.fundamentals;
  */
 public class PigLatinGenerator {
     public String translate(String str) {
+
+
+        if (VowelUtils.startsWithVowel(str) == true) {
+            return str.concat("way");
+        }
+
         return null;
     }
 }
