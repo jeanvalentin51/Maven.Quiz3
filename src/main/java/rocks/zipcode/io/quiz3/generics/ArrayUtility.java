@@ -14,7 +14,14 @@ public class ArrayUtility<SomeType> {
 
     public SomeType findOddOccurringValue() {
 
-        return null;
+        Integer evenOccuringValue = 0;
+
+        for (SomeType eachElement : this.array){
+            if (getNumberOfOccurrences(eachElement) % 2 != 0) {
+                evenOccuringValue = (Integer) eachElement;
+            }
+        }
+        return (SomeType) evenOccuringValue;
     }
 
     public SomeType findEvenOccurringValue() {
