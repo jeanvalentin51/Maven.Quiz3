@@ -18,7 +18,13 @@ public class TicTacToe {
 
 
     public String[] getRow(Integer value) {
-        return null;
+
+        String [] result = new String[matrix.length];
+
+        for (int i = 0; i < matrix.length; i ++){
+            result[i] = matrix[value][i];
+        }
+        return result;
     }
 
     public String[] getColumn(Integer value) {
