@@ -14,25 +14,25 @@ public class ArrayUtility<SomeType> {
 
     public SomeType findOddOccurringValue() {
 
-        Integer evenOccuringValue = 0;
+        SomeType evenOccuringValue = null;
 
         for (SomeType eachElement : this.array){
             if (getNumberOfOccurrences(eachElement) % 2 != 0) {
-                evenOccuringValue = (Integer) eachElement;
+                evenOccuringValue = eachElement;
             }
         }
-        return (SomeType) evenOccuringValue;
+        return evenOccuringValue;
     }
 
     public SomeType findEvenOccurringValue() {
-        Integer evenOccuringValue = 0;
+        SomeType evenOccuringValue = null;
 
         for (SomeType eachElement : this.array){
             if (getNumberOfOccurrences(eachElement) % 2 == 0) {
-                evenOccuringValue = (Integer) eachElement;
+                evenOccuringValue = eachElement;
             }
         }
-        return (SomeType) evenOccuringValue;
+        return evenOccuringValue;
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
@@ -45,6 +45,7 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
+
         return null;
     }
 }
