@@ -5,11 +5,27 @@ package rocks.zipcode.io.quiz3.fundamentals;
  */
 public class VowelUtils {
     public static Boolean hasVowels(String word) {
-        return null;
+        String [] vowels = {"a","e", "i", "o", "u"};
+        StringBuilder s = new StringBuilder(word);
+
+        for (String each : vowels){
+            if (s.indexOf(each) > 0) return true;
+        }
+
+        return false;
     }
 
     public static Integer getIndexOfFirstVowel(String word) {
-        return null;
+        Integer index = 0;
+        String [] vowels = {"a","e", "i", "o", "u"};
+        String [] wordLetters = word.split("");
+
+        for (int i = 0; i < wordLetters.length; i++){
+            for (int k = 0; k < vowels.length; k ++){
+                if (wordLetters[i].equals(vowels[k])) return i;
+            }
+        }
+        return -1;
     }
 
 
