@@ -26,18 +26,13 @@ public enum RockPaperScissorHandSign {
         RockPaperScissorHandSign winner = null;
         RockPaperScissorHandSign looser = null;
 
+        if (this == ROCK) winner =  PAPER;
+        if (this == PAPER) winner =  SCISSOR;
+        if (this == SCISSOR) winner =  ROCK;
 
-        RockPaperScissorHandSign rock = RockPaperScissorHandSign.ROCK;
-        RockPaperScissorHandSign paper = RockPaperScissorHandSign.PAPER;
-        RockPaperScissorHandSign scissors = RockPaperScissorHandSign.SCISSOR;
-
-        if (this == rock) winner =  PAPER;
-        if (this == paper) winner =  SCISSOR;
-        if (this == scissors) winner =  ROCK;
-
-        if (this == rock) looser =  SCISSOR;
-        if (this == paper) looser =  ROCK;
-        if (this == scissors) looser =  PAPER;
+        if (this == ROCK) looser =  SCISSOR;
+        if (this == PAPER) looser =  ROCK;
+        if (this == SCISSOR) looser =  PAPER;
 
         if (this.forWinner) return winner;
         return looser;
